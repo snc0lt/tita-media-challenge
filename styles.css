@@ -1,0 +1,367 @@
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* Questrial */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fas .fa-search{
+  color: #fff;
+}
+
+.navbar{
+  height: 80px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar_container{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+#navbar_logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+#navbar_logo h1{
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #8D8D8D;
+}
+
+#navbar_logo p{
+  font-size: 0.6rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #C2C2C2;
+}
+
+.navbar_menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar_item{
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar_link{
+  color: #8D8D8D;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Questrial', sans-serif;
+  padding: 0 1rem;
+}
+.navbar_link:hover{
+  background-color: #FC758C;
+  color: #fff;
+}
+
+@media screen and (max-width: 960px){
+  .navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+  #navbar_logo{
+    margin-left: 5%;
+  }
+
+  .navbar_menu{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+  }
+
+  .navbar_menu.active{
+    background: #131313;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 90;
+    height: 60vh;
+    font-size: 1.5rem;
+    padding: 1px 0;
+  }
+  
+  #navabr_logo{
+    padding-left: 25px;
+  }
+
+  .navbar_toggle .bar{
+    height: 3px;
+    width: 25px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #FC758C;
+  }
+
+  .navbar_item{
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar_links{
+    display: table;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .navbar_link:hover{
+    background-color: #fff;
+    color: #FC758C;
+  }
+
+  #mobile-menu{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar_toggle .bar{
+    display: block;
+    cursor: pointer;
+  }
+
+  #search_icon{
+    display: none;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2){
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+}
+
+/* main section */
+
+.main{
+  background-color: #FC758C;
+}
+
+.main_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 90vh;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 5%;
+  z-index: 2;
+}
+
+.main_content{
+  text-align: center;
+  color: #fff;
+}
+
+.main_content h1{
+  font-size: 2.5rem;
+  font-family: 'Questrial', sans-serif;
+  letter-spacing: 10px;
+  margin: 25px 0px;
+}
+
+.main_content p{
+  font-family: 'Questrial', sans-serif;
+  letter-spacing: 3px;
+}
+
+.main_content .main_btn{
+  margin: 25px 0px;
+  padding: 12px;
+  background-color: #fff;
+  color: #FC758C;
+  border: none;
+  font-family: 'Questrial', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+/* middle nav */
+
+.middleNav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.middleNav .middleNav_gridIcons{
+  margin-top: 80px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  color: #FC758C;
+}
+
+.middleNav_container{
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.middleNav_menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.middleNav_item{
+  height: 40px;
+}
+
+.middleNav_link{
+  color: #FC758C;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 80%;
+  font-family: 'Questrial', sans-serif;
+}
+
+.middleNav_link:hover{
+  background-color: #FC758C;
+  color: #fff;
+}
+
+
+/* porfolio */
+.porfolio{
+  width: 1040px;
+  margin: 25px auto;
+  columns: 3;
+  column-gap: 20px;
+}
+
+.porfolio .porfolio_image{
+  width: 100%;
+  margin: 0 0 20px;
+  overflow: hidden;
+  break-inside: avoid;
+}
+
+.porfolio .porfolio_container img {
+  max-width: 100%;
+  height: 40%;
+}
+
+.show_btn{
+  margin: 10px auto;
+  padding: 12px;
+  background-color: #FC758C;
+  color: #fff;
+  border: none;
+  font-family: 'Questrial', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+@media screen and (max-width: 960px){
+  .porfolio{
+    columns: 2;
+    margin: 25px auto;
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (max-width: 768px){
+  .porfolio{
+    columns: 1;
+    margin: 25px auto;
+    width: calc(100% - 20px);
+  }
+}
+
+/* footer */
+.footer{
+  margin: 50px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;  
+  color: #c2c2c2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer .footer_container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.footer .footer_links{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+}
+.footer .footer_links a{
+  text-decoration: none;
+  color: #FC758C;
+}
+
+.footer span{
+  color: #FC758C;
+}
